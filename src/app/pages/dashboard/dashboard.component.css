@@ -1,0 +1,17 @@
+.admin{
+    width: 250px;
+    height: 250px;
+    background-color: #2B7B8C;
+    color: #fff;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.vendedor{
+    width: 250px;
+    height: 250px;
+    background-color: #00d696;
+    color: #000;
+    border-radius: 10px;
+    text-align: center;
+}

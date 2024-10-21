@@ -1,0 +1,19 @@
+<div class="card">
+    @if (data.datos.image) {
+        <div class="card-header">
+            <img class="image" [src]="data.datos.image" alt="Imagen de perro raza beagle">
+        </div>
+    }
+    <div class="card-body">
+        <h5 class="card-title">{{data.datos.name}}</h5>
+        <input class="inp" type="text" name="text" id="text" (change)="onChanges($event)">
+        <p class="card-text">{{data.datos.description}}</p>
+        @if (data.datos.price) {
+            <p class="card-text">{{data.datos.price}}</p>
+        }
+    </div>
+    <div class="card-footer">
+        <button class="btn" (click)="showAlert()">Ver info</button>
+    </div>
+</div>
+

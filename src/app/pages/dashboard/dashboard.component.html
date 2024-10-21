@@ -1,0 +1,27 @@
+<!-- Bucles -->
+ 
+<div class="container">
+    @for (usuario of usuarios; track usuario.id) {
+        @if (usuario.rol.rol === 'ADMIN') {
+            <div class="admin">
+                <div class="info">
+                    <h1>{{usuario.name}}</h1>
+                    <span>{{usuario.description}}</span>
+                </div>
+            </div>
+        }@else if (usuario.rol.rol === 'CLIENTE') {
+            <app-card 
+                [data]="{
+                    datos:usuario
+                }">
+            </app-card>
+        }@else {
+            <div class="vendedor">
+                <div class="info">
+                    <h1>{{usuario.name}}</h1>
+                    <span>{{usuario.description}}</span>
+                </div>
+            </div>
+        }
+    }
+</div>

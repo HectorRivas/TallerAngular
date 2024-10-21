@@ -1,20 +1,23 @@
 import { Component, Input } from '@angular/core';
+import { CardComponent } from "../../components/card/card.component";
 
 @Component({
   selector: 'ui-home',
   standalone: true,
-  imports: [],
+  imports: [CardComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  @Input() title!: string;
-  @Input() description!: string;
-  @Input() image!: string;
-  @Input() text_btn!: string;
-  @Input() clickEvent!: () => void;
+  infoLua(){
+    alert("Lua es una perrita de la raza beagle, tiene 3 años y es muy juguetona");
+  }
 
-  showAlert() {
-    this.clickEvent();
+  infoJack(){
+    alert("Jack es un perro de la raza Corgi, tiene 2 años y es muy cariñoso");
+  }
+
+  goToProducts(){
+    window.location.href = "/products";
   }
 }

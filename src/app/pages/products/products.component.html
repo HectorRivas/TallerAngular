@@ -1,0 +1,9 @@
+<div class="container">
+    @for (producto of productos; track $index) {
+        <app-card
+            [data]="{
+                datos: producto
+            }"
+        ></app-card>
+    }
+</div>
