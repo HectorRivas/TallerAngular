@@ -1,23 +1,21 @@
-import { Component, Input } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { CardComponent } from "../../components/card/card.component";
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'ui-home',
   standalone: true,
-  imports: [CardComponent],
+  imports: [CardComponent, FormsModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
+
 export class HomeComponent {
-  infoLua(){
-    alert("Lua es una perrita de la raza beagle, tiene 3 años y es muy juguetona");
-  }
+  email: string = '';
+  password: string = '';
 
-  infoJack(){
-    alert("Jack es un perro de la raza Corgi, tiene 2 años y es muy cariñoso");
-  }
-
-  goToProducts(){
-    window.location.href = "/products";
+  login(user: string, password: string): boolean {
+    console.log(`Usuario: ${user} - Contraseña: ${password}`);
+    return true; // or return false based on your logic
   }
 }
